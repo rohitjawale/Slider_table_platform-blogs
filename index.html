@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .brand-logo {
+          width:100px;
+          height:auto;
+        }
+        /*Custom style*/
+        .text-block.grey {
+          color: #555555;
+        }
+       .text-block.bold {
+        font-weight: 900;
+        text-align: left;
+        }
+        /*Custom style end */
+        .table-scroll {
+          position: relative;
+          margin: auto;
+          overflow:scroll;
+          border: 0.5px solid #e6e6e6;
+          width: 800px;
+        }
+        .table-wrap {
+          width: 100%;
+          overflow: auto;
+        }
+        .table-scroll table {
+          width: 100%;
+          margin: auto;
+          border-collapse: separate;
+          border-spacing: 0;
+        }
+        .table-scroll th,
+        .table-scroll td {
+          padding: 5px 10px;
+          border: 0.5px solid #e6e6e6;
+          background: #fff;
+          white-space: nowrap;
+          vertical-align: top;
+        }
+       
+        .table-scroll thead,
+        .table-scroll tfoot {
+          background: #f9f9f9;
+        }
+        .clone {
+          position: absolute;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+        }
+        .clone th,
+        .clone td {
+          visibility: hidden;
+        }
+        .clone td,
+        .clone th {
+          border-color: transparent;
+        }
+        .clone tbody th {
+          visibility: visible;
+          color: #000;
+        }
+        .clone .fixed-side {
+          border: 0.5px solid #e6e6e6;
+          background:white;
+          visibility: visible;
+        }
+        .clone thead,
+        .clone tfoot {
+          background: transparent;
+        }
+        .checked {
+    color: orange;
+  }
+  .fa-star-half-o{
+  color: orange;
+  }
+  .fa-star-o{
+    color:orange;
+  }
+  .unchecked {
+    color:grey;
+  }
+        .Rating-flex {
+          display:flex;
+          flex-direction: horizontal;
+          justify-content: center;
+          gap: 8px;
+        }
+        .flex-text{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+        }
+        .visit0btn {
+          margin-bottom: 8px;
+          padding: 11px 24px;
+          border-radius: 0.25rem;
+          background-color: #1e22ff;
+          color: white;
+          text-decoration: none;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @media screen and (max-width:479px) {
+          .table-scroll {
+            width: auto;
+          }
+        }
+      </style>
+    <script>
+      // requires jquery library
+      jQuery(document).ready(function () {
+        jQuery(".main-table")
+          .clone(true)
+          .appendTo("#table-scroll")
+          .addClass("clone");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="table-scroll" class="table-scroll">
+      <div class="table-wrap">
+          <table class="main-table">
+              <thead>
+                <tr>
+                  <th class="fixed-side" scope="col">&nbsp;</th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://hdn-1.fynd.com/company/884/applications/000000000000000000000001/application/pictures/free-logo/original/v6YLFKFeJ-Fynd.jpeg"></img></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://cdn.freebiesupply.com/logos/thumbs/2x/squarespace-logo.png" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://image3.mouthshut.com/images/imagesp/925865327s.png" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://cdn.shopify.com/static/share-image-common.jpg" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://play-lh.googleusercontent.com/hGuExJd46Mzuv5ViN3w0d-zak9m8C7C6MO3-FnHZlwispTTloB8L3TMprGf7YgW_Zw" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://images.g2crowd.com/uploads/vendor/image/1141/1551192701.jpg" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://down.imgspng.com/download/0720/wordpress_PNG26.png" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://www.freewebsite.com/wp-content/uploads/2016/06/image001-1.png" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GoDaddy_Logo_-_The_GO.svg/1200px-GoDaddy_Logo_-_The_GO.svg.png" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1503572826/j2winiaaaqummmxsdjdm.png" alt=""></th>
+                  <th scope="col" class="col-head"><img class="brand-logo" src="https://www.hostgator.in/ui/resellerdata/120000_149999/147142/supersite2/hostgator/themes/MinimalGreen-MyTheme/images/myUploadedImages/facebook_new.png" alt=""></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="fixed-side">
+                    <div class="text-block bold"></div></th>
+                  <td>
+                    <div class="text-block grey">Fynd Platform</div>
+                  </td>
+                  <td>
+                      <div class="text-block grey">Squarespace</div></td>
+                      <td><div class="text-block grey">wix</div></td>
+                      <td><div class="text-block grey">Shopify</div></td>
+                      <td><div class="text-block grey">Weebly</div></td>
+                      <td><div class="text-block grey">Ionos</div></td>
+                      <td><div class="text-block grey">Wordpress</div></td>
+                      <td><div class="text-block grey">Jimdo</div></td>
+                      <td><div class="text-block grey">GoDaddy</div></td>
+                      <td><div class="text-block grey">Duda</div></td>
+                      <td><div class="text-block grey">Hostgator</div></td>
+                    </tr>
+                    <tr>
+                      <th class="fixed-side"><div class="text-block bold">Overall Rating</div></th>
+                      <td><div class="rating-wrapper">
+                        <div class="text-block bold">Overall rating</div>
+                        <div class="Rating-flex">
+                          <div class="text-block bold">4.7</div>
+                          <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-o"></span></div>
+        
+                        </div>
+                      </div></td>
+                      <td><div class="rating-wrapper">
+                        <div class="text-block bold">Overall rating</div>
+                        <div class="Rating-flex">
+                          <div class="text-block bold">4.4</div>
+                          <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-o"></span></div>
+        
+                        </div>
+                      </div></td>
+                      <td><div class="rating-wrapper">
+                        <div class="text-block bold">Overall rating</div>
+                        <div class="Rating-flex">
+                          <div class="text-block bold">4.4</div>
+                          <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-o"></span></div>
+        
+                        </div>
+                      </div></td>
+                      <td><div class="rating-wrapper">
+                        <div class="text-block bold">Overall rating</div>
+                        <div class="Rating-flex">
+                          <div class="text-block bold">4.6</div>
+                          <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-o"></span></div>
+                        </div>
+                      </div></td>
+                      <td><div class="rating-wrapper">
+                        <div class="text-block bold">Overall rating</div>
+                        <div class="Rating-flex">
+                          <div class="text-block bold">4.4</div>
+                          <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-o"></span></div>
+                        </div>
+                      </div></td>
+                      <td><div class="rating-wrapper">
+                        <div class="text-block bold">Overall rating</div>
+                        <div class="Rating-flex">
+                          <div class="text-block bold">4.1</div>
+                          <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span></div>
+        
+                          </div>
+                        </div></td>
+                        <td><div class="rating-wrapper">
+                          <div class="text-block bold">Overall rating</div>
+                          <div class="Rating-flex">
+                            <div class="text-block bold">4.6</div>
+                            <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star-half-o"></span></div>
+        
+                            </div>
+                          </div></td>
+                          <td><div class="rating-wrapper">
+                            <div class="text-block bold">Overall rating</div>
+                            <div class="Rating-flex">
+                              <div class="text-block bold">4.1</div>
+                              <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span></div>
+        
+                              </div>
+                            </div></td>
+                            <td><div class="rating-wrapper">
+                              <div class="text-block bold">Overall rating</div>
+                              <div class="Rating-flex">
+                                <div class="text-block bold">4</div>
+                                <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                                  <span class="fa fa-star checked"></span>
+                                  <span class="fa fa-star checked"></span>
+                                  <span class="fa fa-star checked"></span>
+                                  <span class="fa fa-star unchecked"></span></div>
+        
+                                </div>
+                              </div></td>
+                              <td><div class="rating-wrapper">
+                                <div class="text-block bold">Overall rating</div>
+                                <div class="Rating-flex">
+                                  <div class="text-block bold">4.3</div>
+                                  <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o"></span></div>
+        
+                                  </div>
+                                </div></td>
+                                <td><div class="rating-wrapper">
+                                  <div class="text-block bold">Overall rating</div>
+                                  <div class="Rating-flex">
+                                    <div class="text-block bold">4.2</div>
+                                    <div class="rating-star-wrap"><span class="fa fa-star checked"></span>
+                                      <span class="fa fa-star checked"></span>
+                                      <span class="fa fa-star checked"></span>
+                                      <span class="fa fa-star checked"></span>
+                                      <span class="fa fa-star unchecked"></span></div>
+                                      
+                                    </div></div></td>
+                                  </tr>
+                                  <tr>
+                                    <th class="fixed-side"><div class="text-block bold">Transaction Fees</div></th>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">₹599/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$16/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$16/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$29/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$6/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$7/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$4/year</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$9/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$9.99/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$14/month</div>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                      <div class="text-block bold">Starting Price</div>
+                                      <div class="text-block grey">$2.75/month</div>
+                                    </div></td>
+                                    </tr>
+                            <tr>
+                              <th class="fixed-side"><div class="text-block bold">Best For</div></th>
+                              <td>Best Among all</td>
+                              <td>Best for Designs</td>
+                              <td>Best Website Builder</td>
+                              <td>Best for selling online</td>
+                              <td>Best Free plan</td>
+                              <td>Best for simple design</td>
+                              <td>Best for heavy website</td>
+                              <td>Best value for money</td>
+                              <td>Best for creating fast</td>
+                              <td>Best for pure design</td>
+                              <td>Best value</td>
+                            </tr>
+                            <tr>
+                                <th class="fixed-side"><div class="text-block bold">Free trial</div></th>
+                                <td>30 days</td>
+                                <td>14 days</td>
+                                <td>Available</td>
+                                <td>Available</td>
+                                <td>Available</td>
+                                <td> - </td>
+                                <td>Available</td>
+                                <td>Available</td>
+                                <td>30 days</td>
+                                <td>14 days</td>
+                                <td> - </td>
+                              </tr>
+                            <tr>
+                              <th class="fixed-side"><div class="text-block bold">Official Website</div></th>
+                              <td><div class="flex-text">
+                                <a href="https://platform.fynd.com/" class="visit0btn w-button">Visit Now</a>
+                              </div></td>
+                              <td><div class="flex-text">
+                                <a href="https://www.squarespace.com/" class="visit0btn w-button">Visit Now</a>
+                              </div></td>
+                              <td><div class="flex-text">
+                                <a href="https://www.wix.com/" class="visit0btn w-button">Visit Now</a>
+                              </div></td>
+                              <td><div class="flex-text">
+                                <a href="https://www.shopify.com/" class="visit0btn w-button">Visit Now</a>
+                              </div></td>
+                              <td><div class="flex-text">
+                                  <a href="https://www.weebly.com/in" class="visit0btn w-button">Visit Now</a>
+                                </div></td>
+                                <td><div class="flex-text">
+                                    <a href="https://www.ionos.com/" class="visit0btn w-button">Visit Now</a>
+                                  </div></td>
+                                  <td><div class="flex-text">
+                                      <a href="https://wordpress.com/" class="visit0btn w-button">Visit Now</a>
+                                    </div></td>
+                                    <td><div class="flex-text">
+                                        <a href="https://www.jimdo.com/" class="visit0btn w-button">Visit Now</a>
+                                      </div></td>
+                                      <td><div class="flex-text">
+                                          <a href="https://www.godaddy.com/en-in" class="visit0btn w-button">Visit Now</a>
+                                        </div></td>
+                                        <td><div class="flex-text">
+                                            <a href="https://www.duda.co/" class="visit0btn w-button">Visit Now</a>
+                                          </div></td>
+                                        <td><div class="flex-text">
+                                            <a href="https://www.hostgator.com/" class="visit0btn w-button">Visit Now</a>
+                                          </div></td>
+                            </tr>
+                                    </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </body>
+                </html>
